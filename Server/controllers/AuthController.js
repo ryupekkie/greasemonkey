@@ -1,5 +1,3 @@
-import bcrypt from 'bcrypt';
-
 import sendResponse, {
   sendServerErrorResponse,
   FAIL,
@@ -12,6 +10,7 @@ import { generateToken } from '../helpers/jwtHelper';
 class AuthController {
   constructor() {
     this.repo = new UserRepository();
+    var bcrypt = require('bcryptjs');
   }
 
   /**
@@ -28,7 +27,7 @@ class AuthController {
       const user = await this.repo.exists({ email });
 
       if (!user) {
-        const passwordHash = bcrypt.hashSync(password, 10);
+        const passwordHash = bcrypt.passwordHash(password, 10);
         const newUser = await this.repo.save({
           firstname,
           lastname,

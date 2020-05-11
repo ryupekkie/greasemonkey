@@ -116,7 +116,7 @@ i.ion-md-arrow-back {
 }
 
 .ch-aside {
-  background-image: url('https://res.cloudinary.com/dvcaeuvee/image/upload/v1527700136/img1.jpg');
+  background-image: url('../../UI/img/img2.jpg');
   width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -391,7 +391,7 @@ ul.ch-nav {
   justify-content: space-between;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: rgba(32, 32, 32, 0.9);
+  background-color: rgba(233, 122, 19, 0.9);
   color: #f6f6f6;
   padding: 1em;
 }

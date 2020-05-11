@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Maintenance Tracker | Home</title>
+    <title>Grease Monkey | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link href="https://unpkg.com/ionicons@4.1.0/dist/css/ionicons.min.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/ico" href="img/15682.png">
+    <link rel="shortcut icon" type="image/ico" href="../img/icon2_icon.png">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <nav>
                 <ul class="ch-nav ch-card">
                     <li>
-                        <h2><a href="index.html">Maintenance Tracker</a> <i class="icon ion-md-menu" onclick="toggleNav()"></i></h2>
+                        <h2><a href="index.html">Grease Monkey</a> <i class="icon ion-md-menu" onclick="toggleNav()"></i></h2>
                     </li>
                     <div class="ch-nav-right" id="nav">
                         <li><a href="index.html"><button class="ch-btn-round" onclick="window.location.replace('index.html')">Logout</button></a></li>
@@ -27,18 +27,18 @@
             <div class="ch-alert" id="display">
                 <p id="alert"></p>
             </div>
-            <h1 class="ch-display"><i class=""></i> Users Requests</h1>
+            <h1 class="ch-display"><i class=""></i> List of customer requests</h1>
             <h5 class="ch-row">
                 <div class="ch-col-3">
                     <select name="type" id="" class="ch-input">
-                        <option value="">-- filter by request type --</option>
-                        <option value="repair">Repair</option>
-                        <option value="maintenance">Maintenance</option>
+                        <option value="">-- filter by engine type --</option>
+                        <option value="engine1">engine1</option>
+                        <option value="engine2">engine2</option>
                     </select>
                 </div>
                 <div class="ch-col-3">
                     <select name="type" id="" class="ch-input">
-                        <option value="">-- filter by request ID --</option>
+                        <option value="">-- filter by jobID --</option>
                         <option value="ascending">ascending</option>
                         <option value="descending">descending</option>
                     </select>
@@ -52,11 +52,11 @@
                     <table class="ch-table">
                         <thead>
                             <tr>
-                                <th>S.N</th>
                                 <th>No.</th>
-                                <th>Title</th>
+                                <th>JobID</th>
+                                <th>Engine Type</th>
                                 <th>Date</th>
-                                <th>User</th>
+                                <th>Customer</th>
                                 <th>Details</th>
                                 <th>Approve</th>
                                 <th>Disapprove</th>
@@ -66,9 +66,9 @@
                             <tr>
                                 <td>1</td>
                                 <td>0987</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                <td>13/03/2018 11:02am</td>
-                                <td>Jane Doe</td>
+                                <td>engine1</td>
+                                <td>13/05/2020 11:02am</td>
+                                <td>customer1</td>
                                 <td><button onclick="toggleModal('view-request')" class="ch-btn-view"> <i class="icon ion-md-arrow-dropup"></i> View</button></td>
                                 <td><button onclick="displayAlert('Request approved', 1)" class="ch-btn-approve"> <i class="icon ion-md-checkmark-circle-outline"></i> </button></td>
                                 <td><button onclick="displayAlert('Failed to disapprove request', 3)" class="ch-btn-disapprove"> <i class="icon ion-md-close-circle-outline"></i> </button></td>
@@ -76,9 +76,9 @@
                             <tr>
                                 <td>2</td>
                                 <td>1987</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                <td>20/03/2018 10:19am</td>
-                                <td>Juliet Alfa</td>
+                                <td>engine2</td>
+                                <td>20/05/2020 10:19am</td>
+                                <td>customer2</td>
                                 <td><button onclick="toggleModal('view-request')" class="ch-btn-view"> <i class="icon ion-md-arrow-dropup"></i> View</button></td>
                                 <td><button onclick="displayAlert('Failed to approve request', 3)" class="ch-btn-approve"> <i class="icon ion-md-checkmark-circle-outline"></i> </button></td>
                                 <td><button onclick="displayAlert('Failed to disapprove request', 3)" class="ch-btn-disapprove"> <i class="icon ion-md-close-circle-outline"></i> </button></td>
@@ -86,9 +86,9 @@
                             <tr>
                                 <td>3</td>
                                 <td>2987</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                <td>21/03/2018 12:22pm</td>
-                                <td>Bright Nkangsa</td>
+                                <td>engine2</td>
+                                <td>21/05/2020 12:22pm</td>
+                                <td>customer3</td>
                                 <td><button onclick="toggleModal('view-request')" class="ch-btn-view"> <i class="icon ion-md-arrow-dropup"></i> View</button></td>
                                 <td><button onclick="displayAlert('Request approved', 1)" class="ch-btn-approve"> <i class="icon ion-md-checkmark-circle-outline"></i> </button></td>
                                 <td><button onclick="displayAlert('Failed to disapprove request', 3)" class="ch-btn-disapprove"> <i class="icon ion-md-close-circle-outline"></i> </button></td>
@@ -96,19 +96,19 @@
                             <tr>
                                 <td>4</td>
                                 <td>3987</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                <td>22/03/2018 01:02pm</td>
-                                <td>Chinedu Praise</td>
+                                <td>engine1</td>
+                                <td>22/05/2020 01:02pm</td>
+                                <td>customer7</td>
                                 <td><button onclick="toggleModal('view-request')" class="ch-btn-view"> <i class="icon ion-md-arrow-dropup"></i> View</button></td>
                                 <td><button onclick="displayAlert('Failed to approve request', 3)" class="ch-btn-approve"> <i class="icon ion-md-checkmark-circle-outline"></i> </button></td>
                                 <td><button onclick="displayAlert('Failed to disapprove request', 3)" class="ch-btn-disapprove"> <i class="icon ion-md-close-circle-outline"></i> </button></td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>3987</td>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                <td>25/04/2018 10:02am</td>
-                                <td>Lukman Auwal</td>
+                                <td>3989</td>
+                                <td>engine1</td>
+                                <td>25/05/2020 10:02am</td>
+                                <td>customer6</td>
                                 <td><button onclick="toggleModal('view-request')" class="ch-btn-view"> <i class="icon ion-md-arrow-dropup"></i> View</button></td>
                                 <td><button onclick="displayAlert('Failed to disapprove request', 3)" class="ch-btn-approve"> <i class="icon ion-md-checkmark-circle-outline"></i> </button></td>
                                 <td><button onclick="displayAlert('Request disapproved', 1)" class="ch-btn-disapprove"> <i class="icon ion-md-close-circle-outline"></i> </button></td>
@@ -120,33 +120,33 @@
         </div>
     </div>
     <div class="ch-footer-dis ch-card">
-        <h5>Copyright of &copy;2018 Maintenance Tracker by Chima Chukwuemeka</h5>
+        <h5>Copyright of &copy;2020 GreaseMonkey.com</h5>
     </div>
 
     <div class="ch-modal" id="modal">
         <div class="ch-modal-section" id="view-request">
             <div class="ch-row">
               <div class="ch-col-12 ch-modal-heading">
-                <h4>Request Details</h4>
+                <h4>Job Detail</h4>
               </div>
                 <div class="ch-col-10">
-                    <p><label for="title" class="ch-label">Title</label></p>
+                    <p><label for="title" class="ch-label">Customer</label></p>
                     <p>
-                        Lorem impsum dolet et sim, elet dar tar
+                        customer1
                     </p>
                     <br>
-                    <p><label for="type" class="ch-label">Type</label></p>
-                    <p>Repair</p>
+                    <p><label for="type" class="ch-label">Engine Type</label></p>
+                    <p>engine1</p>
                     <br>
                     <p><label for="description" class="ch-label">Description</label>
                     </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas at architecto molestiae numquam, laborum possimus quam odit nam nisi velit consequatur cumque expedita.</p>
+                    <p>เครื่องยนต์ ไม่ทำงาน</p>
                     <br>
                     <p><label for="status" class="ch-label">Status</label></p>
-                    <p>Approved</p>
+                    <p>รออนุมัติ</p>
                     <br>
                     <p><label for="date" class="ch-label">Date</label></p>
-                    <p>22/03/2018 01:02pm</p>
+                    <p>22/03/2020 01:02pm</p>
                     <br>
                     <button onclick="toggleModal('view-request'); displayAlert('Approve request before resolving', 2)" class="ch-btn-ok"> <i class="icon ion-md-checkmark-circle"></i> Resolve</button>
                     <button onclick="toggleModal('view-request')" class="ch-btn-close"> <i class="icon ion-md-close"></i> Close</button>
