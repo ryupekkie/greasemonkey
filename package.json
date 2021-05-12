@@ -52,7 +52,7 @@
         "migrate": "^1.6.2",
         "morgan": "^1.9.1",
         "node": "^14.2.0",
-        "nodemailer": "^4.6.5",
+        "nodemailer": "^6.4.16",
         "pg": "^7.0.3"
     },
     "devDependencies": {
